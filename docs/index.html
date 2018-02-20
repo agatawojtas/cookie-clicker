@@ -20,6 +20,43 @@
             font-size: 200%;
             font-family: quango;
             text-align: center;
+
+        }
+
+        .flex-container {
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+
+        }
+
+        .flex-item {
+
+            background: pink;
+            padding: 5px;
+            height: 150px;
+            margin-top: 10px;
+
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            align-content: center;
+
+        }
+
+        .checkbox {
+
+            width: 100px;
+            height: px;
+
+        }
+
+        .checkbox2 {
+
+            width: 10px;
+            height: 10px;
         }
     </style>
 
@@ -33,25 +70,31 @@
     <h1 class="title">Login</h1>
 
     <div class="style">
-        <label for="login">Podaj login</label>
-        <input type="text">
+        <div class="flex-item">
+            <label for="login">Podaj login</label>
 
-    </div>
-
-    <div class="style">
-        <label for="haslo">Podaj haslo</label>
-
-        <input type="text">
-
+            <input class="checkbox">
+        </div>
     </div>
 
 
+    <h1 class="title">Haslo</h1>
+
+    <div class="style">
+        <div class="flex-item">
+            <label for="haslo">Podaj haslo</label>
+
+            <input class="checkbox">
+        </div>
+    </div>
+
+
 
     <div class="style">
 
-        <input type="checkbox"> Male
+        <input class="checkbox2"> Male
 
-        <input type="checkbox"> Female
+        <input class="checkbox2"> Female
 
     </div>
 
