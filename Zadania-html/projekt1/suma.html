@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="first-no">
+    <input type="text" class="second-no">
+    <button class="count" class="count">Count</button>
+
+
+    <div class="sum"></div>
+
+    <div class="sub">
+
+    </div>
+
+
+    <div class="mult">
+
+    </div>
+
+
+    <div class="div">
+
+    </div>
+
+    <script type="text/javascript">
+        const divSum = document.querySelector('.sum')
+        const divSub = document.querySelector('.sub')
+        const divMult = document.querySelector('.mult')
+        const divDiv = document.querySelector('.div')
+        const firstNo = document.querySelector('.first-no')
+        const secondNo = document.querySelector('.second-no')
+        const countButton = document.querySelector('.count')
+
+        countButton.addEventListener('click', function () {
+            const a = Number(firstNo.value);
+            const b = Number(secondNo.value);
+
+            const result1 = sum(a, b);
+            const result2 = sub(a, b);
+            const result3 = div(a, b);
+            const result4 = mult(a, b);
+            divSum.textContent = `${a} + ${b} = ${result1}`
+            divSub.textContent = `${a} - ${b} = ${result2}`
+            divDiv.textContent = `${a} / ${b} = ${result3}`
+            divMult.textContent = `${a} * ${b} = ${result4}`
+        })
+
+
+
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+
+        function div(a, b) {
+            return a / b;
+        }
+
+        function mult(a, b) {
+            return a * b;
+        }
+
+    </script>
+</body>
+
+</html>
