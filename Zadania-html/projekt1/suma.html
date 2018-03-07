@@ -30,6 +30,10 @@
 
     </div>
 
+    <input type="text" class="text">
+
+    <div class="text-display"> </div>
+
     <script type="text/javascript">
         const divSum = document.querySelector('.sum')
         const divSub = document.querySelector('.sub')
@@ -38,6 +42,16 @@
         const firstNo = document.querySelector('.first-no')
         const secondNo = document.querySelector('.second-no')
         const countButton = document.querySelector('.count')
+        const textInput = document.querySelector('.text')
+        const textDisplay = document.querySelector(".text-display")
+
+        console.dir(textDisplay)
+
+        textInput.addEventListener('change', function (e) {
+            const txt = e.target.value
+            textDisplay.textContent = txt
+        })
+
 
         countButton.addEventListener('click', function () {
             const a = Number(firstNo.value);

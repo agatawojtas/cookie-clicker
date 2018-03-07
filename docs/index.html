@@ -1,104 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+
     <style>
-        /* camelCase, tomekJestNajlepszy */
-
-        .title {
-            font-size: 400%;
-            font-family: quango;
-            text-align: center;
+        body {
+            font-family: 'lobster';
+            font-size: 30px;
+            overflow: hidden;
         }
 
-        .style {
-            font-size: 200%;
-            font-family: quango;
-            text-align: center;
+        .background {
+
+            background-image: url('background-2132910_960_720.jpg');
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            height: 100vh;
+        }
+
+
+        .note {
+            background: url(https://lh4.ggpht.com/er4T35JxjGnIFYL_p7HU9G0GFwNJ2eZzt1oGloPL9RC18f_MUU4h5_wwHI6IGGKWIuw=w700);
+            background-repeat: no-repeat;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 20%;
+            padding-top: 80px;
 
         }
+
+        .note2 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 65%;
+        }
+
 
         .flex-container {
             display: flex;
-            align-content: center;
             flex-direction: column;
+            margin-left: 100px;
 
         }
 
-        .flex-item {
-
-            background: pink;
-            padding: 5px;
-            height: 150px;
-            margin-top: 10px;
-
-            line-height: 150px;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: center;
-            align-content: center;
-
+        .monster {
+            transform: rotate(-2deg) translatey(-15px) translateX(-22px)
         }
 
-        .checkbox {
 
+        .cursor {
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 20%;
+            left: 10%
+        }
+
+        .grandma {
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 40%;
+            left: 10%
+        }
+
+        .mine {
+
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 60%;
+            left: 10%
+        }
+
+        .factory {
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 80%;
+            left: 10%
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
             width: 100px;
-            height: px;
+            justify-content: space-between;
+            position: absolute;
+            left: 50%;
+            top: 100%;
 
         }
 
-        .checkbox2 {
+        .save {
+            font-family: lobster;
+            font-size: 40px;
+            background-color: white;
+        }
 
-            width: 10px;
-            height: 10px;
+        .reset {
+            font-family: lobster;
+            font-size: 40px;
+            background-color: white;
+        }
+
+        .score {
+            position: absolute;
+            left: 70%;
+            top: 20%;
+        }
+
+        .cookie {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            right: 180%;
+            top: 60%;
+            -webkit-animation: spin 2s linear infinite;
+            -moz-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite
+        }
+
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
         }
     </style>
+
 
 </head>
 
 
 <body>
+    <div class="background"> </div>
 
 
 
-    <h1 class="title">Login</h1>
+    <div class="note">
 
-    <div class="style">
-        <div class="flex-item">
-            <label for="login">Podaj login</label>
+        <div class="monster flex-container">
 
-            <input class="checkbox">
+            <img class=monster src="http://coloringpagesforkids.info/wp-content/uploads/2011/12/Cookie-Monster.png">
         </div>
+
+
     </div>
 
+    <div class="note2">
+        <img src="https://lh4.ggpht.com/er4T35JxjGnIFYL_p7HU9G0GFwNJ2eZzt1oGloPL9RC18f_MUU4h5_wwHI6IGGKWIuw=w700">
 
-    <h1 class="title">Haslo</h1>
 
-    <div class="style">
-        <div class="flex-item">
-            <label for="haslo">Podaj haslo</label>
-
-            <input class="checkbox">
+        <div class="cursor flex-container font">Cursor 150</br>
         </div>
-    </div>
+
+
+        <img class=cursor src="https://image.flaticon.com/icons/svg/149/149050.svg">
+
+        <div class="grandma flex-container font">Grandma 150</br>
+        </div>
+
+        <img class=grandma src="https://image.flaticon.com/icons/svg/374/374995.svg">
+
+        <div class="mine flex-container font">Mine 150</br>
+        </div>
+
+        <img class=mine src="https://image.flaticon.com/icons/svg/183/183233.svg">
+
+        <div class="factory flex-container font ">Factory 150</br>
+        </div>
+
+        <img class=factory src="https://image.flaticon.com/icons/svg/237/237406.svg">
+
+
+        <img class="cookie" src="https://image.flaticon.com/icons/png/512/590/590746.png">
+
+        <div class="score">Score</div>
+
+
+        <div class="buttons">
+            <button class=save> Save </button>
+            <button class=reset> Reset </button>
+
+        </div>
 
 
 
-    <div class="style">
-
-        <input class="checkbox2"> Male
-
-        <input class="checkbox2"> Female
-
-    </div>
-
-    <a href="#">Submit</a>
 
 
 </body>
